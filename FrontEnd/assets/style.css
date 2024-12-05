@@ -186,6 +186,8 @@ footer nav ul {
 	margin: 2em
 }
 
+
+/* #region boutons catégorie */
 .btns{
 	display: flex;
 	justify-content: center;
@@ -194,7 +196,7 @@ footer nav ul {
 	gap: 10px;
 }
 
-.btn-tous, .btn-objets, .btn-appartements, .btn_hotelsRestaurants{
+.btn-categories{
 	border-radius: 60px;
 	padding: 7px 20px 7px 20px;
 	font: inherit;
@@ -205,7 +207,138 @@ footer nav ul {
 	color: #1D6154;
 }
 
-.btn-tous:hover, .btn-objets:hover, .btn-appartements:hover, .btn_hotelsRestaurants:hover{
+.btn-categories:hover{
 	background-color: #1D6154;
 	color: white;
 }
+
+/* #endregion boutons catégorie */
+
+.login{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.oublie-mdp{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: underline;
+	color: black;	
+}
+
+.mentions-legales{
+	display: flex;
+	justify-content: right;
+	color: black;
+
+}
+
+
+/* #region MODAL */
+
+.modal{
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center; 		/* verticalement */
+	justify-content: center; 	/* horizontalement */
+}
+
+.modal-wrapper{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	width: 600px;
+	/*  100vw donne la largeur max de l'écran*/
+	max-width: calc(100vw - 20px);
+	/*  100vh donne la largeur max de l'écran*/
+	max-height: calc(100vw - 20px);
+	padding: 20px;
+	
+	border-radius: 1%;
+}
+
+.modal-title{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	font: inherit;
+	font-size: large;
+	color: black;
+	padding: 20px;
+}
+
+.cards-container{
+	overflow: auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	gap: 30px 10px;
+
+}
+
+.card{
+	position: relative;
+	display: flex;
+	height: auto;
+	width: 100px;
+}
+
+.card-img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+
+}
+
+.btn-supprCard{
+	position: absolute;
+	background-color: black;
+	top: 5px;
+	right: 5px;
+	height: 20px;
+	width: 20px;
+	
+}
+
+.barre{
+	background-color: lightgray;
+	height: 1px;
+	width: 100%;
+	margin: 20px;
+	
+}
+
+.btn-modal-close{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background-color: transparent;
+	width: auto;
+	display: inline-block;
+	border: 1px red solid;
+}
+
+.btn-modal-close:active{
+	color: red;
+}
+
+.btn-modal-addPhoto{
+	border-radius: 60px;
+	padding: 7px 20px 7px 20px;
+	font: inherit;
+	font-size: medium;
+	font-weight: 600;
+	background-color: #1D6154;
+	border: 1px solid #1D6154;
+	color: white;
+}
+
+/* #endregion MODAL */
